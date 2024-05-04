@@ -1,0 +1,70 @@
+* HashMap
+- unsorted
+- un orderd
+-thread unsafe 
+- key and vaule pair
+@ Constructor
+1. HashMap()-> Default constructor
+	-create empty HashMap
+	-size=0, capacity=16, Load Factor=0.75f
+2. HashMap(int intitCap)-> argument as capacity
+	-create empty mapwith given capacity
+	-size=0, capacity=given Capacity, load Factor=0.75
+3. HashMap(int initCap,double loadFactor)-> paramterized Constructor
+	- create empty map with give capacity nd load factor
+	- size=0, capacity=given, loadfactor=given
+4. hashMap(Map<? extends K, ? extends V>m)
+	-create populated Hashmap of type key, value form any map
+	-AL,LL,Vector-> javac err(All list)
+	-HS,LHS,TS -> javac err(All Set)
+	-HM,LHM,TM -> No error (Reason-> having generic type of K or sub type & 	V or sub type
+
+@ Create empty HashMap
+
+HashMap<Integer,UserDefineType> listHashMap=new HashMap<>();--> Default constructor
+
+@ API
+1. public V put(K, V)
+	- it will insert into map return null
+	-if enrty into map is already exists then it override the old value and 	return old value	
+	V is value / return type
+2. public v putIfAbsent(K,V)
+	- it will returns null
+	- in case of exists and retains old value
+3. pubic void putAll(Map<? extends K, ? extends V>m)
+	- It will copy all entries of Map
+4. public V get(Object key)
+	- it will return value if key found
+	- else return null
+	
+5. boolean containsKey(Object key)
+	- returns true if map contains key otherwise false
+	- m1.containsKey(Object k1)
+	- O(1)
+6. boolean containsValue(Object v1)
+	- returns true if map found values
+	- O(n)
+	 
+@ Limirtations
+	- Can't iterate over map
+	- can't search/sort/remove 
+	- remove by value base criteria
+
+@ How to overCome on limitations
+
+1. Extract Key type reference from map
+
+HashMap<Integer,String> list= new HashMap<>()
+	- list.keySet();	
+	- key extract
+2. Extract value of refence from map
+
+HashMap<Integer,String> list= new HashMap<>()
+	- list.values();
+	- Value Extract        
+
+4 
+
+
+
+	                          
